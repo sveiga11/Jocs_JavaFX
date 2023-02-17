@@ -5,13 +5,12 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 
 public class Sprite {
+
     private Image image;
-    private double positionX;
-    private double positionY;
-    private double velocityX;
-    private double velocityY;
-    private double width;
-    private double height;
+
+    private double positionX, positionY;
+    private double velocityX, velocityY;
+    private double width, height;
 
     public Sprite()
     {
@@ -21,18 +20,18 @@ public class Sprite {
         velocityY = 0;
     }
 
-    public void setImage(Image i)
+    public void setImage(Image image)
     {
-        image = i;
-        width = i.getWidth();
-        height = i.getHeight();
+        this.image = image;
+        width = image.getWidth();
+        height = image.getHeight();
 
     }
 
-    public void setImage(String filename)
+    public void setImage(String fileName)
     {
-        Image i = new Image(filename);
-        setImage(i);
+        Image image = new Image(fileName);
+        setImage(image);
     }
 
     public void setPosition(double x, double y)
